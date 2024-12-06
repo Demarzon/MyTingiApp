@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InventoryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="KEEP TRACK OF YOUR GOODS!!"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+
+    </LinearLayout>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="3"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item1"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/almond_spaghetti"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Almond Spaghetti"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item2"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/beetroot_spaghetti"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Beetroot_Spaghetti"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item3"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/cashew"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Cashew"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item4"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/chickpea_spaghetti"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Chickpea Spaghetti"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item5"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/cocomacaroni"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Cocomacaroni"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item6"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/fusilli"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Fusilli"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item7"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/macaroni"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Macaroni"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item8"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/pistachios"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Pistachios"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/item9"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:src="@drawable/roasted_almonds"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="20sp"
+                android:text="Roasted_Almonds"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </GridLayout>
+
+
+</LinearLayout>
