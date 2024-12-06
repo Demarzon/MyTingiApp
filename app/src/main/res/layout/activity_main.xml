@@ -5,68 +5,76 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
     android:background="@color/dblue"
+    android:gravity="center"
+    android:orientation="vertical"
     android:padding="30dp"
-    android:gravity="center">
+    tools:context=".MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:src="@drawable/tinig_logo"/>
+        android:src="@drawable/tinig_logo" />
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        android:layout_height="10dp" />
 
     <EditText
+        android:id="@+id/emailEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:background="@drawable/rounded_corner"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
-        android:inputType="text"
-        android:background="@drawable/rounded_corner"/>
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        android:layout_height="10dp" />
+
     <EditText
+        android:id="@+id/passwordEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
         android:hint="Password"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:padding="10dp"
         android:inputType="textPassword"
-        android:background="@drawable/rounded_corner"/>
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="20dp"/>
+        android:layout_height="20dp" />
+
     <Button
         android:id="@+id/login1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
         android:backgroundTint="@color/lgreen"
-        android:textColor="@color/black"
-        />
+        android:text="Login"
+        android:textColor="@color/black" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:orientation="vertical"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:orientation="vertical">
+
         <Button
+            android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Create new account"
+            android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>
-
 
 
 </LinearLayout>
