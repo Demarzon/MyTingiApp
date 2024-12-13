@@ -6,8 +6,6 @@ import android.widget.Toast
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+
 
 
         val button = findViewById<Button>(R.id.login1)
@@ -40,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
                     if(it.isSuccessful){
                         val intent = Intent(this, MainActivity2::class.java)
+                        intent.putExtra("email", email)
                         startActivity(intent)
                         Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
 

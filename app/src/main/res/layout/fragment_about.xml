@@ -7,6 +7,13 @@
     android:paddingTop="30dp"
     tools:context=".AboutFragment">
 
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -32,6 +39,21 @@
         android:textStyle="bold"
         android:textAlignment="center"
         android:text="Contact Us"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Support"/>
+
+
+
 
 
 

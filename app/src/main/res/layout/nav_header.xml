@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:src="@drawable/baseline_account_circle_white"/>
     <TextView
+        android:id="@+id/navuser"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:textSize="20sp"
@@ -19,6 +20,7 @@
         android:textColor="@color/white"
         android:textStyle="bold"/>
     <TextView
+        android:id="@+id/navemail"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:textSize="15sp"

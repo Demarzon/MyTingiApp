@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "230524835344",
-    "project_id": "mytingi",
-    "storage_bucket": "mytingi.firebasestorage.app"
+    "project_number": "1057079723964",
+    "project_id": "tingiapp",
+    "storage_bucket": "tingiapp.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:230524835344:android:4607d7a065e4cc12815c95",
+        "mobilesdk_app_id": "1:1057079723964:android:805b7a876101c33c814db9",
         "android_client_info": {
           "package_name": "com.example.mytingi"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB9oHx0H4ZO0ZWnKBJBB-tt2vjVbq-e-Pk"
+          "current_key": "AIzaSyB1hYCVjC98BQWBAEY70IB6Fnyn7u-e1ZQ"
         }
       ],
       "services": {
