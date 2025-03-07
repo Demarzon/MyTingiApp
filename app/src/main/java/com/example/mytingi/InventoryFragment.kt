@@ -6,11 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.ImageButton
+import android.widget.Spinner
 import android.widget.TextView
 
 
 class InventoryFragment : Fragment() {
+
+
+
+    private var items = mutableListOf<Item>()
 
 
 
@@ -22,6 +29,10 @@ class InventoryFragment : Fragment() {
 
     ): View? {
         val a = inflater.inflate(R.layout.fragment_inventory, container, false)
+
+        val categorySpinner = a.findViewById<Spinner>(R.id.categorySpinner)
+
+
 
 
         val button1 = a.findViewById<ImageButton>(R.id.item1)
@@ -50,6 +61,44 @@ class InventoryFragment : Fragment() {
             intent.putExtra("message", message)
             startActivity(intent)
         }
+
+      items = mutableListOf(
+            Item("Item 1", "delicate", button1, textView1),
+            Item("Item 2", "sensitive", button2, textView2),
+            Item("Item 3", "delicate", button3, textView3),
+            Item("Item 4", "sensitive", button4, textView4),
+            Item("Item 5", "delicate", button5, textView5),
+            Item("Item 6", "sensitive", button6, textView6),
+          Item("Item 7", "delicate", button7, textView7),
+          Item("Item 8", "sensitive", button8, textView8),
+          Item("Item 9", "delicate", button9, textView9)
+
+           // ... Add all your items with their categories
+        )
+
+        ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.category_array, // Define this array in strings.xml
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            categorySpinner.adapter = adapter
+        }
+
+        categorySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedCategory = parent?.getItemAtPosition(position).toString()
+                filterItemsByCategory(selectedCategory)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // Handle case where nothing is selected (e.g., show all items)
+                filterItemsByCategory("All")
+            }
+        }
+
 
 
         button1.setOnClickListener{
@@ -90,17 +139,23 @@ class InventoryFragment : Fragment() {
         }
 
 
-
-
-
-
-
-
-
-
         // Inflate the layout for this fragment
         return a
     }
+    private fun filterItemsByCategory(category: String) {
+        val filteredItems = if (category == "All") {
+            items
+        } else {
+            items.filter { it.category == category }
+        }
+
+        for (item in items) {
+            val isVisible = filteredItems.contains(item)
+            item.imageButton.visibility = if (isVisible) View.VISIBLE else View.GONE
+            item.textView.visibility = if (isVisible) View.VISIBLE else View.GONE
+        }
+    }
+
 
 
 
